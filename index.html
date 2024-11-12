@@ -4,34 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주식 예측 웹앱</title>
-    <script>
-        async function fetchMarketCap() {
-            const response = await fetch('@openai.highbuff.com/?method=marketCap');
-            const data = await response.json();
-            document.getElementById('marketCap').innerText = `시가총액: ${data.marketCap}`;
-        }
-
-        async function fetchStockPrediction() {
-            const stockName = document.getElementById('stockName').value;
-            const response = await fetch(`@openai.highbuff.com/?method=portfolioAI&name=${stockName}`);
-            const data = await response.json();
-            document.getElementById('predictionResult').innerText = `예측 결과: ${data.prediction}`;
-        }
-
-        function handleButtonClick() {
-            fetchMarketCap();
-            fetchStockPrediction();
-        }
-    </script>
-</head>
 <body>
-    <h1>주식 예측 웹앱</h1>
-    <div>
-        <label for="stockName">종목 이름:</label>
-        <input type="text" id="stockName" placeholder="종목 이름을 입력하세요">
-        <button onclick="handleButtonClick()">예측하기</button>
-    </div>
-    <div id="marketCap"></div>
-    <div id="predictionResult"></div>
-</body>
+    test
+</body>    
+</head>
 </html>
